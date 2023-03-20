@@ -3,5 +3,5 @@ cufflinks
 scikit-learn
 streamlit-aggrid
 hydralit_components
-streamlit-metrics
-st_aggrid
+#streamlit-metrics
+streamlit-aggrid
