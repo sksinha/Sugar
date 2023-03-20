@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from io import StringIO
+from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 st.header('National Cooperative Database :sunglasses:')
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
@@ -22,3 +23,7 @@ if uploaded_file is not None:
     st.dataframe(df, use_container_width=True)
 
     edited_df = st.experimental_data_editor(df, num_rows="dynamic")
+
+
+
+data= pd.read_csv('df.csv', index_col=0) 
