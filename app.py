@@ -26,4 +26,4 @@ if uploaded_file is not None:
 
 
 
-data= pd.read_csv('df.csv', index_col=0) 
+data= pd.read_csv('df', index_col=0) 
