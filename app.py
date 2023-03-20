@@ -22,4 +22,4 @@ if uploaded_file is not None:
     #st.write(dataframe)
     st.dataframe(df, use_container_width=True)
     edited_df = st.experimental_data_editor(df, num_rows="dynamic")
-    data= pd.read_csv('df', index_col=0) 
+    AgGrid(df)
