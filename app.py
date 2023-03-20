@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from io import StringIO
-st.header('National Cooperative Database  :blue[colors] and emojis :sunglasses:')
+st.header('National Cooperative Database :sunglasses:')
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:
