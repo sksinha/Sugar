@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from io import StringIO
-
+st.header('National Cooperative Database  :blue[colors] and emojis :sunglasses:')
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:
@@ -21,4 +21,4 @@ if uploaded_file is not None:
     #st.write(dataframe)
     st.dataframe(df, use_container_width=True)
 
-edited_df = st.experimental_data_editor(df, num_rows=”dynamic”)
+edited_df = st.experimental_data_editor(df, num_rows="dynamic")
