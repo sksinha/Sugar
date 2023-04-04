@@ -24,7 +24,8 @@ if uploaded_file is not None:
     st.dataframe(df, use_container_width=True)
    # edited_df = st.experimental_data_editor(df, num_rows="dynamic")
     #AgGrid(df)
-    
+logy = True  # to make small values visible
+textauto = True  # to write plot label    
 sel_state = st.selectbox('**Select state**', df.STATE.unique())
 fil_df = df[df.STATE == sel_state]  # filter
 
