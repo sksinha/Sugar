@@ -21,5 +21,5 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     #st.write(dataframe)
     st.dataframe(df, use_container_width=True)
-    edited_df = st.experimental_data_editor(df, num_rows="dynamic")
-    AgGrid(df)
+   # edited_df = st.experimental_data_editor(df, num_rows="dynamic")
+    #AgGrid(df)
