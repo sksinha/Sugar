@@ -25,7 +25,7 @@ if uploaded_file is not None:
    # edited_df = st.experimental_data_editor(df, num_rows="dynamic")
     #AgGrid(df)
     
-sel_state = st.selectbox('**Select state**', df.STATE)
+sel_state = st.selectbox('**Select state**', df.STATE.unique())
 fil_df = df[df.STATE == sel_country]  # filter
 
 # Build a new df based from filter.
