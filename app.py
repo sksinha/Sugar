@@ -26,12 +26,12 @@ if uploaded_file is not None:
     #AgGrid(df)
     
 sel_state = st.selectbox('**Select state**', df.STATE.unique())
-fil_df = df[df.STATE == sel_country]  # filter
+fil_df = df[df.STATE == sel_state]  # filter
 
 # Build a new df based from filter.
 new_df = pd.melt(fil_df, id_vars=['STATE'], var_name="feature",
                  value_vars=['OWNERSHIP STATUS (COOP / LEASED / PVT.)', 'OPERATIONAL STATUS DURING SY 2021-22'])
-title = f'country name: {sel_state}'
+title = f'State name: {sel_state}'
 fig = px.bar(new_df, x='feature', y='value',
              height=300, log_y=logy, text_auto=textauto,
              title=title)
