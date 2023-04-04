@@ -31,7 +31,7 @@ fil_df = df[df.STATE == sel_state]  # filter
 
 # Build a new df based from filter.
 new_df = pd.melt(fil_df, id_vars=['STATE'], var_name="feature",
-                 value_vars=['OWNERSHIP STATUS (COOP / LEASED / PVT.)', 'OPERATIONAL STATUS DURING SY 2021-22'])
+                 value_vars=['ACTUAL CAPACITY', 'COGEN CAPACITY IN MW (Total)'])
 title = f'State name: {sel_state}'
 fig = px.bar(new_df, x='feature', y='value',
              height=300, log_y=logy, text_auto=textauto,
