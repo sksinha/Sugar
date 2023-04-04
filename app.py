@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 from io import StringIO
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 st.header('National Cooperative Database :sunglasses:')
@@ -23,3 +24,17 @@ if uploaded_file is not None:
     st.dataframe(df, use_container_width=True)
    # edited_df = st.experimental_data_editor(df, num_rows="dynamic")
     #AgGrid(df)
+    
+sel_state = st.selectbox('**Select state**', df.STATE)
+fil_df = df[df.STATE == sel_country]  # filter
+
+# Build a new df based from filter.
+new_df = pd.melt(fil_df, id_vars=['STATE'], var_name="feature",
+                 value_vars=['OWNERSHIP STATUS (COOP / LEASED / PVT.)', 'OPERATIONAL STATUS DURING SY 2021-22'])
+title = f'country name: {sel_country}'
+fig = px.bar(new_df, x='feature', y='value',
+             height=300, log_y=logy, text_auto=textauto,
+             title=title)
+
+with st.expander('**State Info**', expanded=True):
+    st.plotly_chart(fig, use_container_width=True)
