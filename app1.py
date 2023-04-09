@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+import numpy as np
 import functions
 
 #st.set_page_config(layout = "wide", page_icon = 'logo.png', page_title='EDA')
