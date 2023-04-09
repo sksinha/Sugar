@@ -45,7 +45,7 @@ if dataset:
     n, m = df.shape
     st.write(f'<p style="font-size:130%">Dataset contains {n} rows and {m} columns.</p>', unsafe_allow_html=True)   
     st.dataframe(df)
-
+    st.bar_chart(df)
 
     all_vizuals = ['Info', 'NA Info', 'Descriptive Analysis', 'Target Analysis', 
                    'Distribution of Numerical Columns', 'Count Plots of Categorical Columns', 
