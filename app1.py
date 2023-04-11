@@ -30,8 +30,8 @@ dataset = st.file_uploader(label = '')
 
 #use_defo = st.checkbox('Use example Dataset')
 
-#if use_defo:
-  #  dataset = pd.read_csv('https://raw.githubusercontent.com/AnshuTrivedi/Data-Scientist-In-Python/master/Datasets/step_1/1.Python%20for%20data%20science%20fundamentals/googleplaystore.csv')
+if use_defo:
+   dataset = pd.read_csv('https://raw.githubusercontent.com/AnshuTrivedi/Data-Scientist-In-Python/master/Datasets/step_1/1.Python%20for%20data%20science%20fundamentals/googleplaystore.csv')
 
 st.sidebar.header('Import Dataset to Use Available Features: 👉')
 
@@ -45,7 +45,7 @@ if dataset:
     n, m = df.shape
     st.write(f'<p style="font-size:130%">Dataset contains {n} rows and {m} columns.</p>', unsafe_allow_html=True)   
     st.dataframe(df)
-    st.bar_chart(df)
+    
 
     all_vizuals = ['Info', 'NA Info', 'Descriptive Analysis', 'Target Analysis', 
                    'Distribution of Numerical Columns', 'Count Plots of Categorical Columns', 
