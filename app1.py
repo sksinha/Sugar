@@ -34,7 +34,7 @@ use_defo = st.checkbox('Use example Dataset')
 if use_defo :
    dataset = pd.read_csv('https://raw.githubusercontent.com/AnshuTrivedi/Data-Scientist-In-Python/master/Datasets/step_1/1.Python%20for%20data%20science%20fundamentals/googleplaystore.csv')
    st.sidebar.header('Import Dataset to Use Available Features: 👉')
-st.write(dataset)
+else
 if dataset:
     if file_format == 'csv' or use_defo:
         df = pd.read_csv(dataset)
