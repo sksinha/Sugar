@@ -5,3 +5,4 @@ streamlit-aggrid
 hydralit_components
 #streamlit-metrics
 streamlit-aggrid
+vega_datasets
